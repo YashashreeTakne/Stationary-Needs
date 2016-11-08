@@ -45,8 +45,8 @@
 <!-- 							</div>				 -->
 						</li>
 						<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">College Needs<span class="caret"></span></a>
-							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">College Needs</a>
+<!-- 							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu"> -->
 								<div class="w3ls_vegetables">
 									<ul>
 										
@@ -55,12 +55,12 @@
 <!-- 						<li><a href="product/productListAngular">Accesories</a></li> -->
 						</ul>
 								</div>                  
-							</div>				
+<!-- 							</div>				 -->
 						</li>
 						
 						<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Art Needs<span class="caret"></span></a>
-							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Art Needs</a>
+<!-- 							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu"> -->
 								<div class="w3ls_vegetables">
 									<ul>
 										
@@ -69,12 +69,12 @@
 <!-- 						<li><a href="product/productListAngular">Accesories</a></li> -->
 						</ul>
 								</div>                  
-							</div>				
+<!-- 							</div>				 -->
 						</li>
 						
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools<span class="caret"></span></a>
-							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools</a>
+<!-- 							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu"> -->
 								<div class="w3ls_vegetables">
 									<ul>
 										
@@ -82,7 +82,7 @@
 <!-- 											  <li><a href="product/productListAngular">Stapller</a></li> -->
 <!-- 											  <li><a href="product/productListAngular">Sharpners</a></li> -->
 									</ul>
-								</div>                  
+<!-- 								</div>                   -->
 							</div>	 
 						</li>
 						</ul>

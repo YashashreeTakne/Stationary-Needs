@@ -41,17 +41,19 @@
                 <form:input path="productname" id="productname" class="form-Control" />
             </div>
 
-            <div class="form-group">
-                             
+<!--             <div class="form-group"> -->
 <%-- 	<form:label path="category">CATEGORY</form:label> --%>
-	
-<%-- 	<form:radiobutton path="category.catid" value="1"/>School Needs  --%>
-<%-- 	<form:radiobutton path="category.catid" value="2"/>College Needs	 --%>
-<%-- 	<form:radiobutton path="category.catid" value="3"/>Office Needs --%>
-           
+<%-- 	<form:radiobutton path="category" value="1"/>School Needs  --%>
+<%-- 	<form:radiobutton path="category" value="2"/>College Needs	 --%>
+<%-- 	<form:radiobutton path="category" value="3"/>Office Needs --%>
 <!--             </div> -->
 
-            <div class="form-group">
+<!-- 	<div class="form-group"> -->
+<%-- 			<form:label path="category">Category</form:label> --%>
+<%--  <form:input path="category" id="category" class="form-Control" />			 --%>
+		
+<!-- 		</div> -->
+		  <div class="form-group">
                 <label for="productdescription">Description</label>
                 <form:textarea path="productdescription" id="productdescription" class="form-Control" />
             </div>
@@ -78,7 +80,7 @@
                 <label for="supplierId">Supplier</label>
 <%--                 <form:input path="supplierId" id="supplierId" class="form-Control" /> --%>
  			<form:select path="supplierId" cssClass="form-control">
-				<form:options items="${suppliers}" class="form-Control" />
+				<form:options items="${suppliers}" class="form-Control" width="50%"/>
 			</form:select>    
 	       
 	        </div>

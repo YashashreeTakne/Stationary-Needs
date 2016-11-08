@@ -15,6 +15,8 @@
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
+        <br><br><br><br><br>
+        
             <h1>Product Inventory Page</h1>
 
 
@@ -56,8 +58,9 @@
                 </tr>
             </c:forEach>
         </table>
+<br><br>
 
         <a href="<spring:url value="/admin/product/addProduct" />" class="btn btn-primary">Add Product</a>
-
-
+<br>
+<br><br>
 <%@ include file="shared/footer.jsp" %>

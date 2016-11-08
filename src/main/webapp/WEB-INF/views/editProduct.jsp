@@ -44,29 +44,10 @@
                 <label for="productname">Name</label>
                 <form:errors path="productname" cssStyle="color:#ff0000;" />
                 <form:input path="productname" id="productname" class="form-Control" />
-            </div>
-
-<!--             <div class="form-group"> -->
-<!--                 <label for="category">Category</label> -->
-<%--                 <label class="checkbox-inline"><form:radiobutton path="category.catid" id="category" value="1" />College Needs</label> --%>
-<%--                 <label class="checkbox-inline"><form:radiobutton path="category.catid" id="category" value="2" />School Needs</label> --%>
-<%--                 <label class="checkbox-inline"><form:radiobutton path="category.catid" id="category" value="3" />Office Needs</label> --%>
+<!--             </div>            <div class="form-group"> -->
+<!--                 <label for="brand">Brand</label> -->
+<%--                 <form:textarea path="brand" id="brand" class="form-Control" /> --%>
 <!--             </div> -->
-<!-- <div class="form-group"> -->
-               
-<%-- <%--                <form:radiobutton path="category.catid" value="1" />College Needs --%> --%>
-               
-<%-- 	<form:label path="category">CATEGORY</form:label> --%>
-	
-<%-- 	<form:radiobutton path="category.catid" value="1"/>School Needs  --%>
-<%-- 	<form:radiobutton path="category.catid" value="2"/>College Needs	 --%>
-<%-- 	<form:radiobutton path="category.catid" value="3"/>Office Needs --%>
-           
-<!--             </div> -->
-            <div class="form-group">
-                <label for="brand">Brand</label>
-                <form:textarea path="brand" id="brand" class="form-Control" />
-            </div>
             
             <div class="form-group">
                 <label for="productdescription">Description</label>
@@ -91,17 +72,11 @@
                 <form:input path="selling_price" id="selling_price" class="form-Control" />
             </div>
             
-<!--             <div class="form-group"> -->
-<!--                 <label for="supplier">Supplier</label> -->
-<%--                 <form:errors path="supplier" cssStyle="color:#ff0000;" /> --%>
-<%--                 <form:input path="supplier" id="supplier" class="form-Control" /> --%>
-<!--             </div> -->
-            
             <div class="form-group">
                 <label for="supplierId">Supplier</label>
 <%--                 <form:input path="supplierId" id="supplierId" class="form-Control" /> --%>
  			<form:select path="supplierId" cssClass="form-control">
-				<form:options items="${suppliers}" class="form-Control" />
+				<form:options items="${suppliers}" class="form-Control" width="50%"/>
 			</form:select>    
 	       
 	        </div>

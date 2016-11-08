@@ -30,7 +30,6 @@ public class MyController {
 			return model;
 	}
 	
-	
 	@RequestMapping("/*/Hello")
 	public ModelAndView login5()
 	{
@@ -56,7 +55,6 @@ public class MyController {
 	        return "registerCustomer";
 	    }
 
-	
 //	@RequestMapping("/registerCustomer")
 //	public ModelAndView registerCustomer()
 //	{
@@ -152,6 +150,12 @@ public class MyController {
 	public ModelAndView registerCustomer5()
 	{
 		ModelAndView model = new ModelAndView("Hello");
+			return model;
+	}
+	@RequestMapping("/contact")
+	public ModelAndView registerCustomer19()
+	{
+		ModelAndView model = new ModelAndView("contact");
 			return model;
 	}
 	@RequestMapping("/*/viewProduct")

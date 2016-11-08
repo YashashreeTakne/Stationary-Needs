@@ -11,12 +11,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.model.BillingAddress;
-import com.model.ShippingAddress;
 @Entity
 @Table(name="customer")
 public class Customer implements Serializable{
@@ -32,8 +32,12 @@ public class Customer implements Serializable{
     private String customerName;
 
     @NotEmpty (message = "The customer email must not be null")
+    @Email
     private String customerEmail;
-    private String customerPhone;
+	@NotEmpty (message = "The Phone No. must not be null")
+//	@Range(min=7000000000, max=9000000000)
+	@Pattern(regexp="^([7-9]{1})([0-9]{9})", message = "Not a valid number ,Phone No. must be of 10 digits" )
+	private String customerPhone;
 
 //    @NotEmpty (message = "The customer username must not be null")
 //    private String username;
@@ -133,4 +137,4 @@ public class Customer implements Serializable{
     public void setShippingAddress(ShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
     }
-} 
+}

@@ -31,18 +31,30 @@
 <%-- <form:form action="${addAction1}" commandName="supplier" method="post" > --%>
 <table>
 <%-- 	<c:if test="${!empty supplier.name}"> --%>
-	<tr>
+<!-- 	<tr> -->
+<!-- 		<td> -->
+<%-- 			<form:label path="id"> --%>
+<%-- 				<spring:message text="ID"/> --%>
+<%-- 			</form:label> --%>
+<!-- 		</td> -->
+<!-- 		<td> -->
+<%-- 			<form:input path="id" readonly="true" size="8"  disabled="true" /> --%>
+<%-- 			<form:hidden path="id" /> --%>
+<!-- 		</td>  -->
+<!-- 	</tr> -->
+<%-- 	</c:if> --%>
+
+<tr>
 		<td>
 			<form:label path="id">
-				<spring:message text="ID"/>
+				<spring:message text="Supplier id"/>
 			</form:label>
 		</td>
 		<td>
-			<form:input path="id" readonly="true" size="8"  disabled="true" />
-			<form:hidden path="id" />
+			<form:input path="id" />
+			<form:errors path="id" cssClass="error"></form:errors>
 		</td> 
 	</tr>
-<%-- 	</c:if> --%>
 	<tr>
 		<td>
 			<form:label path="name">
@@ -54,6 +66,7 @@
 			<form:errors path="name" cssClass="error"></form:errors>
 		</td> 
 	</tr>
+	
 	<tr>
 		<td>
 			<form:label path="address">
@@ -88,12 +101,16 @@
 			<form:errors path="email" cssClass="error"></form:errors>
 		</td> 
 	</tr>
-	<tr>
-	
-		<div class="form-group" align="center">
-			<button  type="submit" value="add">Add Supplier</button>
-			<br>
-		</div>
+	<tr><br><br>
+	<td>
+<!-- 		<div class="form-group" align="center"> -->
+<!-- 			<button  type="submit" value="add">Add Supplier</button> -->
+<!-- 			<br> -->
+<!-- 		</div> -->
+		<input type="submit" value="submit" class="btn btn-success">
+        <a href="<c:url value="/admin/supplierInventory" />" class="btn btn-danger">Cancel</a>
+		
+	</td>
 	
 <!-- 		<td colspan="2"> -->
 <%-- 			<c:if test="${!empty supplier.name}"> --%>
@@ -105,7 +122,7 @@
 <%-- 					value="<spring:message text="Add Supplier"/>" /> --%>
 <%-- 			</c:if> --%>
 <!-- 		</td> -->
-	</tr>
+	
 </table>	
 </form:form>
 <br>
@@ -124,7 +141,7 @@
 		<th width="60">Delete</th>
 	</tr>
 	
-	<c:forEach items="${getAllSupplier}" var="supplier">
+	<c:forEach items="${supplierList}" var="supplier">
 		<tr>
 			<td>${supplier.id}</td>
 			<td>${supplier.name}</td>

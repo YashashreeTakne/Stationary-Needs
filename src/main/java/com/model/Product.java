@@ -34,15 +34,17 @@ public class Product implements Serializable{
 	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="catid")
 	private Category category;
-public Category getCategory() {
+
+	public Category getCategory() {
 		return category;
 	}
+	
 	public void setCategory(Category category) {
 		this.category = category;
 	}
 
 	//    private String category;
-    private String brand;
+//    private String brand;
    
     private String productdescription;
    
@@ -97,13 +99,6 @@ public Category getCategory() {
 //		this.category = category;
 //	}
 
-	public String getBrand() {
-		return brand;
-	}
-
-	public void setBrand(String brand) {
-		this.brand = brand;
-	}
 
 	public String getProductdescription() {
 		return productdescription;

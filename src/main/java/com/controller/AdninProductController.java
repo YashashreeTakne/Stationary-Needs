@@ -79,6 +79,7 @@ public class AdninProductController {
         Product product = productService.getProductById(id);
 
         model.addAttribute("product", product);
+    	model.addAttribute("suppliers", this.supplierService.getSuppliers());
 
         return "editProduct";
     }
@@ -133,73 +134,4 @@ public class AdninProductController {
 		return"productListAngular";
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-//    @RequestMapping("/supplier/addSupplier")
-//    public String addSupplier(Model model){
-//    	Supplier supplier = new Supplier();   
-//        model.addAttribute("supplier", supplier);
-//
-//        return "addSupplier";
-//    }
-//    
-//    @RequestMapping(value="/supplier/addSupplier", method = RequestMethod.POST)
-//    public String addSupplierPost(@Valid @ModelAttribute("supplier") Supplier supplier, BindingResult result, HttpServletRequest request){
-//
-//        if(result.hasErrors()){
-//            return "addSupplier";
-//        }
-//
-//        supplierService.addSupplier(supplier);
-//        
-//        return "redirect:/admin/supplierInventory";
-//    }
-//
-//    @RequestMapping("/supplier/editSupplier/{id}")
-//    public String editSupplier(@PathVariable("id") int id,  Model model){
-//    	Supplier supplier = supplierService.getSupplierById(id);
-//
-//        model.addAttribute("supplier", supplier);
-//
-//        return "editSupplier";
-//    }
-//
-//    @RequestMapping(value="/supplier/editSupplier", method = RequestMethod.POST)
-//    public String editSupplierPost(@Valid @ModelAttribute("supplier") Supplier supplier, BindingResult result){
-//
-//        if(result.hasErrors()){
-//            return "editSupplier";
-//        }
-//
-//        supplierService.updateSupplier(supplier);
-//
-//        return "redirect:/admin/supplierInventory";
-//    }
-//
-//    @RequestMapping("/supplier/deleteSupplier/{id}")
-//    public String deleteSupplier(@PathVariable int id, Model model, HttpServletRequest request){
-//        
-//    	Supplier supplier = supplierService.getSupplierById(id);
-//        supplierService.deleteSupplier(supplier);
-//
-//        return "redirect:/admin/supplierInventory";
-//    }
-}
+	}

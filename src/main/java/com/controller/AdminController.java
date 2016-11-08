@@ -78,7 +78,7 @@ public class AdminController {
    			return model;
    	}
     
-    @RequestMapping("/productListAngular")
+    @RequestMapping("/admin/productListAngular")
    	public ModelAndView registerCustomer19()
    	{
    		ModelAndView model = new ModelAndView("productListAngular");

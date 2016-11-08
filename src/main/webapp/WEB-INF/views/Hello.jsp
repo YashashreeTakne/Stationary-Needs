@@ -1,5 +1,13 @@
 <%@include file="shared/header.jsp" %>
 <%@include file="shared/nav.jsp" %>
+
+<c:url value="/resources/IMGS/{{product.productId}}.png" var="src1" />
+
+<div ng-app="app" ng-controller="myController">
+<div ng-init="productList()">
+		
+	
+		
 <div class="w3l_banner_nav_right">
 			<section class="slider">
 				<div class="flexslider">
@@ -49,6 +57,8 @@
 		<div class="clearfix"></div>
 	</div>
 <!-- banner -->
+
+		
 	<div class="banner_bottom">
 			<div class="wthree_banner_bottom_left_grid_sub">
 			</div>
@@ -82,24 +92,32 @@
 			<div class="clearfix"> </div>
 	</div>
 <!-- top-brands -->
+
+	<center>
+Search: <input type="text" ng-model="searchCondition" aline="center" placeholder="Search Products">
+</center>
+	<br><br><br>
 	<div class="top-brands">
 		<div class="container">
 			<h3>Hot Offers</h3>
 			<div class="agile_top_brands_grids">
+						<div ng-repeat="product in products | filter:searchCondition">
+			
 				<div class="col-md-3 top_brand_left">
 					<div class="hover14 column">
+					
 						<div class="agile_top_brand_left_grid">
 							<div class="tag"><img src="${img}/tag.png" alt=" " class="img-responsive" /></div>
 							<div class="agile_top_brand_left_grid1">
 								<figure>
 									<div class="snipcart-item block" >
 										<div class="snipcart-thumb">
-											<a href="product/productListAngular"><img title=" " alt=" " src="${img}/146.jpg" /></a>		
-											<p>Lead Penciles</p>
-											<h4>Rs.7.99 <span>Rs.10.00</span></h4>
+		<a href="<c:url value="/product/viewProduct/{{product.productId}}" />"><img src="${src1 }" alt="image" class="img-responsive"></a>		
+											<p>{{product.productname}}</p>
+											<h4>Rs.{{product.selling_price}} <span>Rs.{{product.prize}}</span></h4>
 										</div>
 										<div class="snipcart-details top_brand_home_details">
-											<form action="#" method="post">
+											<form action="product/productListAngular" method="post">
 												<fieldset>
 <!-- 													<input type="hidden" name="cmd" value="_cart" /> -->
 <!-- 													<input type="hidden" name="add" value="1" /> -->
@@ -110,7 +128,7 @@
 <!-- 													<input type="hidden" name="currency_code" value="USD" /> -->
 <!-- 													<input type="hidden" name="return" value=" " /> -->
 <!-- 													<input type="hidden" name="cancel_return" value=" " /> -->
-													<input type="submit" name="submit" value="Add to cart" class="button" />
+													<input type="submit" name="submit" value="View" class="button" />
 												</fieldset>
 											</form>
 										</div>
@@ -120,125 +138,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 top_brand_left">
-					<div class="hover14 column">
-						<div class="agile_top_brand_left_grid">
-						
-							<div class="agile_top_brand_left_grid1">
-								<figure>
-									<div class="snipcart-item block" >
-										<div class="snipcart-thumb">
-											<a href="product/productListAngular"><img title=" " alt=" " src="${img}/135.jpg" /></a>		
-											<p>U-pin holder</p>
-											<h4>Rs.11.99 <span>Rs.15.00</span></h4>
-										</div>
-										<div class="snipcart-details top_brand_home_details">
-											<form action="#" method="post">
-												<fieldset>
-<!-- 													<input type="hidden" name="cmd" value="_cart" /> -->
-<!-- 													<input type="hidden" name="add" value="1" /> -->
-<!-- 													<input type="hidden" name="business" value=" " /> -->
-<!-- 													<input type="hidden" name="item_name" value="basmati rise" /> -->
-<!-- 													<input type="hidden" name="amount" value="11.99" /> -->
-<!-- 													<input type="hidden" name="discount_amount" value="1.00" /> -->
-<!-- 													<input type="hidden" name="currency_code" value="USD" /> -->
-<!-- 													<input type="hidden" name="return" value=" " /> -->
-<!-- 													<input type="hidden" name="cancel_return" value=" " /> -->
-													<input type="submit" name="submit" value="Add to cart" class="button" />
-												</fieldset>
-											</form>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
 				</div>
-				<div class="col-md-3 top_brand_left">
-					<div class="hover14 column">
-						<div class="agile_top_brand_left_grid">
-							<div class="agile_top_brand_left_grid_pos">
-								<img src="${img}/offer.png" alt=" " class="img-responsive" />
-							</div>
-							<div class="agile_top_brand_left_grid1">
-								<figure>
-									<div class="snipcart-item block">
-										<div class="snipcart-thumb">
-											<a href="product/productListAngular"><img src="${img}/149.jpg" alt=" " class="img-responsive" /></a>
-											<p>Desk Accessary</p>
-											<h4>Rs.80.00 <span>Rs.150.00</span></h4>
-										</div>
-										<div class="snipcart-details top_brand_home_details">
-											<form action="#" method="post">
-												<fieldset>
-<!-- 													<input type="hidden" name="cmd" value="_cart" /> -->
-<!-- 													<input type="hidden" name="add" value="1" /> -->
-<!-- 													<input type="hidden" name="business" value=" " /> -->
-<!-- 													<input type="hidden" name="item_name" value="Pepsi soft drink" /> -->
-<!-- 													<input type="hidden" name="amount" value="80.00" /> -->
-<!-- 													<input type="hidden" name="discount_amount" value="1.00" /> -->
-<!-- 													<input type="hidden" name="currency_code" value="USD" /> -->
-<!-- 													<input type="hidden" name="return" value=" " /> -->
-<!-- 													<input type="hidden" name="cancel_return" value=" " /> -->
-													<input type="submit" name="submit" value="Add to cart" class="button" />
-												</fieldset>
-
-
-
-<!-- 							<button class="btn btn-danger my-cart-btn" data-id="2" data-name="product 2" data-summary="summary 2" -->
-<%-- 							 data-price="20" data-quantity="1" data-image="${img}/img_2.png">Add to Cart</button> --%>
-
-     								 
-
-
-											</form>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 top_brand_left">
-					<div class="hover14 column">
-						<div class="agile_top_brand_left_grid">
-							<div class="agile_top_brand_left_grid_pos">
-								<img src="${img}/offer.png" alt=" " class="img-responsive" />
-							</div>
-							<div class="agile_top_brand_left_grid1">
-								<figure>
-									<div class="snipcart-item block">
-										<div class="snipcart-thumb">
-											<a href="product/productListAngular"><img src="${img}/148.jpg" alt=" " class="img-responsive" /></a>
-											<p>Bracelate Pen</p>
-											<h4>Rs.19.00 <span>Rs.25.00</span></h4>
-										</div>
-										<div class="snipcart-details top_brand_home_details">
-											<form action="#" method="post">
-												<fieldset>
-<!-- 													<input type="hidden" name="cmd" value="_cart" /> -->
-<!-- 													<input type="hidden" name="add" value="1" /> -->
-<!-- 													<input type="hidden" name="business" value=" " /> -->
-<!-- 													<input type="hidden" name="item_name" value="dogs food" /> -->
-<!-- 													<input type="hidden" name="amount" value="19.00" /> -->
-<!-- 													<input type="hidden" name="discount_amount" value="1.00" /> -->
-<!-- 													<input type="hidden" name="currency_code" value="USD" /> -->
-<!-- 													<input type="hidden" name="return" value=" " /> -->
-<!-- 													<input type="hidden" name="cancel_return" value=" " /> -->
-													<input type="submit" name="submit" value="Add to cart" class="button" />
-												</fieldset>
-											</form>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
+								<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
+</div>
+</div>	
 <!-- //top-brands -->
 <!-- fresh-vegetables -->
 	<div class="fresh-vegetables">
@@ -272,7 +178,7 @@
 								<img src="${img}/174.jpg" alt=" " class="img-responsive" />
 								<div class="w3l_fresh_vegetables_grid1_rel_pos">
 									<div class="more m1">
-										<a href="#" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+										<a href="product/productListAngular" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
 									</div>
 								</div>
 							</div>

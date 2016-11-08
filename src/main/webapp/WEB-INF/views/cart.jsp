@@ -38,6 +38,7 @@ List of products purchased
 </tr>
 </thead>
 <tbody>
+
 <tr ng-repeat="cartItem in cart.cartItems">
 
 <td> {{cartItem.product.productname}} </td>

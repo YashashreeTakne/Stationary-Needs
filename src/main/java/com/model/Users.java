@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -25,6 +26,8 @@ public class Users implements Serializable{
     private int usersId;
 	@NotEmpty(message="Username can not be empty!")
     private String username;
+	@NotEmpty(message="Please select a password")
+//	@Length(min=6, max=20, message="Password should be between 6 - 20 charactes")
     private String password;
     private Boolean enabled;
     
